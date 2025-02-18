@@ -81,14 +81,14 @@ void writeRegister(uint8_t reg, uint8_t data) {
 
 /*
 DLPF Bandwidth Options:
-DLPF_CFG  Bandwidth (Hz)  Delay (ms)  ODR (kHz)
-0 246.0 0.59  1.125
-1 111.4 0.88  1.125
-2 50.4  1.94  1.125
-3 23.9  3.88  1.125
-4 11.5  7.80  1.125
-5 5.7 15.70 1.125
-6 473.0 0.27  1.125
-7 1046.0 (No LPF) 0.17  1.125
-
+   *  DLPF       3dB Bandwidth [Hz]      Output Rate [Hz]
+   *    0              246.0               1125/(1+ASRD) (default)
+   *    1              246.0               1125/(1+ASRD)
+   *    2              111.4               1125/(1+ASRD)
+   *    3               50.4               1125/(1+ASRD)
+   *    4               23.9               1125/(1+ASRD)
+   *    5               11.5               1125/(1+ASRD)
+   *    6                5.7               1125/(1+ASRD) 
+   *    7              473.0               1125/(1+ASRD)
+   *    OFF           1209.0               4500
 */
